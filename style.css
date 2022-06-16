@@ -1,0 +1,181 @@
+:root{
+    --main-font: 'Open Sans', sans-serif;;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(273deg, 75%, 66%);
+    background-image: linear-gradient(hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: var(--main-font);
+}
+
+.container{
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+
+
+.desktop-img{
+    display: none;
+}
+
+picture{
+    position: relative;
+    z-index: 100;
+}
+
+
+.main-img{
+    bottom: 40px;
+    left: 10px;
+    position: absolute;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+.question{
+    display: flex;
+    flex-direction: column;
+
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.arrow{
+    transition: .7s ease-in-out;
+}
+
+.title{
+    font-size: 12px;
+    font-weight: 400;
+    margin: 1rem 0;
+}
+
+.accordian-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform .5s ease-in-out;
+}
+
+.title.active{
+    font-weight: 700;
+}
+
+.accordian-header img.active{
+    transform: rotate(180deg);
+}
+
+p{
+    max-height: 0;
+    overflow: hidden;
+    transition: .7s ease-in-out;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #404040;
+    font-size: 10px;
+}
+
+@media only screen and (min-width: 1100px) {
+    body{
+        z-index: 1000;
+    }
+
+    .container{
+        flex-direction: row;
+        align-items: center;
+        height: 70%;
+    }
+
+    .header{
+        width: 65%;
+    }
+
+    picture{
+        position: absolute;
+        z-index: 100;
+        bottom: 23%;
+        right: 63%;
+    }
+
+    .desktop-img{
+        display: block;
+    }
+
+    .main-img,
+    .background-img{
+        display: none;
+    }
+
+    .accordian{
+        padding: 4rem;
+    }
+
+    .about{
+        text-align: left;
+    }
+
+    .title{
+        font-size: 16px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .desktop-img{
+        position: relative;
+        bottom: 35%;
+        right: 65%;
+    }
+
+    .d-pattern,
+    .d-box,
+    .d-woman {
+        position: absolute;
+    }
+
+    .d-pattern{
+       bottom: -250px;
+       left: -500px;
+       z-index: -1000;
+    }
+
+    .d-woman{
+        bottom: -175px;
+        z-index: -100;
+    }
+
+    .d-box{
+        bottom: -140px;
+        z-index: 100;
+    }
+}
