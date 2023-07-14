@@ -1,6 +1,7 @@
 const question = document.querySelectorAll('.accordian-header')
 
-question.forEach(item => item.addEventListener('click', () => {
+question.forEach(item => item.addEventListener('click', (e) => {
+    console.log(e.target)
     item.classList.toggle('active')
     // Add styling to children elements
     const bold = item.firstElementChild;
